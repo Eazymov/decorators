@@ -1,0 +1,14 @@
+
+declare type Target = Object;
+
+declare type Property = string|symbol;
+
+declare interface Descriptor {
+  writable: boolean;
+  configurable: boolean;
+  value: any;
+  get: () => any;
+  set: (value: any) => void;
+  enumerable: boolean;
+  initializer: (...args: any[]) => any;
+}
