@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "description": "A set of various decorators",
   "main": "lib/decorators.js",
+  "types": "types",
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "dev": "tsc -w",
     "build": "webpack"
