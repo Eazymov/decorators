@@ -12,3 +12,5 @@ declare interface Descriptor {
   enumerable: boolean;
   initializer: (...args: any[]) => any;
 }
+
+declare type Decorator = (target: Target, prop: Property, desc: Descriptor) => void;

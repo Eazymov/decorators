@@ -1,3 +1,5 @@
 declare module "decorators";
 
-export default 123;
+export const Readonly: Decorator;
+export const Freeze: ClassDecorator;
+export const Seal: ClassDecorator;
