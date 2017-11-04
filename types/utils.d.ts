@@ -1,5 +1,5 @@
 
-declare type Target = Object;
+declare type Target = any;
 
 declare type Property = string|symbol;
 
