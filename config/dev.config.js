@@ -5,19 +5,7 @@ const merge = require('webpack-merge');
 
 module.exports = merge(baseConfig, {
   entry: {
-    'index': './static/src/index.ts',
-  },
-  output: {
-    path: path.resolve(__dirname, '../static/dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
+    'index': './static/src/index.js',
   },
   devServer: {
     contentBase: './static',
