@@ -1,14 +1,31 @@
-import { Readonly } from 'package';
+import { Readonly, Freeze, Seal, Mixin } from 'package';
 
-class Test {
+class ReadonlyTest {
 
   @Readonly field = 123;
 
   @Readonly method () {
-    console.log('Fired');
+    /* ... */
   }
 }
 
-const test = new Test();
+new ReadonlyTest();
 
-console.log(test);
+@Freeze
+class FreezeTest { }
+
+new FreezeTest();
+
+@Seal
+class SealTest { }
+
+new SealTest();
+
+@Mixin({
+  method () {
+    /* ... */
+  },
+})
+class MixinTest { }
+
+new MixinTest();

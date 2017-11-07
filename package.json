@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "concurrently 'tsc -w' 'webpack-dev-server --config config/dev.config.js'",
     "build": "webpack --config config/prod.config.js",
-    "test": "npm run test:unit",
+    "test": "npm run test:types && npm run test:unit",
+    "test:types": "tsc -p test/types/tsconfig.json",
     "test:unit": "babel-node test/unit/runner.js"
   },
   "repository": {
