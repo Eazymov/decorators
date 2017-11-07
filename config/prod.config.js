@@ -4,7 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(baseConfig, {
   entry: {
-    'decorators.min': './lib/decorators.js',
+    'decorators.min': './lib/index.js',
   },
   plugins: [
     new UglifyJSPlugin(),

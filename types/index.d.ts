@@ -12,3 +12,4 @@ export const Readonly: Decorator;
 export const Freeze: ClassDecorator;
 export const Seal: ClassDecorator;
 export const Mixin: (shared: Shared) => ClassDecorator;
+export const SuppressErrors: MethodDecorator;
