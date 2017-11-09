@@ -1,5 +1,4 @@
 import { Decorator } from 'types';
-import { forEach } from '@eazymov/utils';
 
 const Describe = (newDescriptor: PropertyDescriptor): Decorator => {
   return (
@@ -9,7 +8,7 @@ const Describe = (newDescriptor: PropertyDescriptor): Decorator => {
   ): void => {
     const changedKeys: Array<string> = Object.keys(newDescriptor);
 
-    forEach(changedKeys, (key: string) => {
+    changedKeys.forEach((key: string) => {
       descriptor[key] = newDescriptor[key];
     });
   }
