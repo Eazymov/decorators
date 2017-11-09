@@ -8,13 +8,11 @@ const SuppressErrors: MethodDecorator = (
 
   descriptor.value = function () {
     try {
-      method.apply(this, arguments);
+      return method.apply(this, arguments);
     } catch (err) {
-      return;
+      return err;
     }
   }
-
-  delete (<any>descriptor).initializer;
 }
 
 export default SuppressErrors;

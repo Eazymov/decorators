@@ -1,15 +1,48 @@
-import { Readonly, Freeze, Seal, Mixin } from 'package';
+import {
+  Benchmark,
+  Freeze,
+  Mixin,
+  Readonly,
+  Seal,
+  SuppressErrors,
+  Validate,
+  Watch,
+} from 'package';
 
-class ReadonlyTest {
+class Main {
 
-  @Readonly field = 123;
+  @Readonly readonlyField = 123;
 
-  @Readonly method () {
+  @Readonly readonlyMethod () {
+    /* ... */
+  }
+  
+  @Benchmark benchmark () {
+    /* ... */
+  }
+  
+  @SuppressErrors noErrors () {
+    /* ... */
+  }
+
+  @Validate(() => true)
+  validateField = 123;
+
+  @Validate(() => false)
+  validateMethod () {
+    /* ... */
+  }
+
+  @Watch(console.log)
+  watchField = 123;
+
+  @Watch(console.log)
+  watchMethod () {
     /* ... */
   }
 }
 
-new ReadonlyTest();
+new Main();
 
 @Freeze
 class FreezeTest { }
