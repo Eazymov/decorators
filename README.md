@@ -28,55 +28,55 @@ yarn add @eazymov/decorators
 
 ## Examples
 
-### `@Benchmark`.
+### @Benchmark
 
 Parameters: no
 
-Description: logs performance.now() before and after method execution.
+Description: logs performance.now() before and after method execution
 
-### `@Describe`.
+### @Describe
 
-Parameters: `(descriptor: PropertyDescriptor) => PropertyDecorator & MethodDecorator`.
+Parameters: `(descriptor: PropertyDescriptor) => PropertyDecorator & MethodDecorator`
 
-Description:
+Description: provides a possibility to exactly describe property or method
 
-### `@Freeze`.
+### @Freeze
 
 Parameters: no
 
 Description: applies Object.freeze to class instance
 
-### `@Mixin`.
+### @Mixin
 
 Parameters:
 
 Description:
 
-### `@Readonly`.
+### @Readonly
 
 Parameters: no
 
-Description: set `
+Description: set `writable = false` to class property / method
 
-### `@Seal`.
+### @Seal
 
 Parameters: no
 
 Description: applies Object.seal to class instance
 
-### `@SuppressErrors`.
+### @SuppressErrors
 
 Parameters: no
 
 Description: suppress errors occuring during method execution
 
-### `@Validator`.
+### @Validator
 
 Parameters: `(validatorFunction: (...args: any[]) => boolean) => PropertyDecorator & MethodDecorator`
 
 Description: fires before assigning a class property, if `validatorFunction` returns true, the value changes, otherwise it doesn't
 
-### `@Watch`.
+### @Watch
 
 Parameters: any function
 
