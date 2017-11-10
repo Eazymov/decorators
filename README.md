@@ -1,4 +1,4 @@
-# @eazymov/decorators
+# @eazymov/decorators // IN PROGRESS
 
 > Set of various decorators for javascript
 
