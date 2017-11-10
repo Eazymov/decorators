@@ -1,5 +1,6 @@
 import {
   Benchmark,
+  Describe,
   Freeze,
   Mixin,
   Readonly,
@@ -24,6 +25,14 @@ class Main {
   @SuppressErrors noErrors () {
     /* ... */
   }
+
+  @Describe({
+    writable: false,
+    enumerable: false,
+    configurable: false,
+    value: {},
+  })
+  describedProperty = null;
 
   @Validate(() => true)
   validateField = 123;

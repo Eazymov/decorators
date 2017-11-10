@@ -1,6 +1,6 @@
 import { Readonly } from 'package';
 
-describe('`Readonly` decorator', function () {
+describe('`Readonly` decorator:', function () {
 
   class Test {
 
@@ -15,5 +15,5 @@ describe('`Readonly` decorator', function () {
     };
 
     expect(throwsError).toThrowError();
-  })
+  });
 });

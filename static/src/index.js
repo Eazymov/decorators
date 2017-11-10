@@ -1,17 +1,16 @@
-import { Describe } from 'package';
+import { Benchmark } from 'package';
 
 class Test {
 
   field = 123;
 
-  @Describe({
-    writable: false,
-  })
-  method () {
-    
+  @Benchmark
+  method (a, b) {
+    console.log(this, a, b);
+    return new Array(10000000);
   }
 }
 
 const test = new Test();
 
-console.log(test.method);
+test.method(1, 2);

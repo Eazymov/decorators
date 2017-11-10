@@ -1,6 +1,6 @@
 import { Decorator } from 'types';
 
-const Validate = (validator: Function): Decorator => {
+const Validator = (checker: Function): Decorator => {
   return (
     target: Object,
     prop: PropertyKey,
@@ -18,10 +18,10 @@ const Validate = (validator: Function): Decorator => {
       },
   
       set (newValue: any) {
-        value = validator(newValue) ? newValue : value;
+        value = checker(newValue) ? newValue : value;
       },
     }
   }
 }
 
-export default Validate;
+export default Validator;

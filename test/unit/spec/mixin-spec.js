@@ -11,7 +11,7 @@ describe('`Mixin` decorator:', function () {
       return this;
     },
 
-    passArguments (...args) {
+    getArguments (...args) {
       return args;
     },
   });
@@ -30,6 +30,6 @@ describe('`Mixin` decorator:', function () {
   });
 
   it('shared methods should properly get arguments', function () {
-    expect(test.passArguments(1, 'a', true)).toEqual([1, 'a', true]);
-  })
+    expect(test.getArguments(1, 'a', true)).toEqual([1, 'a', true]);
+  });
 });
