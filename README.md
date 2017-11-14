@@ -48,7 +48,7 @@ Description: applies Object.freeze to class instance
 
 ### @Mixin
 
-Parameters:
+Parameters: `(object: Object) => ClassDecorator`
 
 Description:
 
