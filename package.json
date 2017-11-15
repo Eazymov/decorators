@@ -1,6 +1,6 @@
 {
   "name": "decorators",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A set of various decorators",
   "main": "dist/decorators.cjs.js",
   "module": "lib/index.js",
@@ -13,10 +13,10 @@
   "scripts": {
     "dev": "concurrently 'npm run dev:types' 'npm run dev:server'",
     "dev:types": "tsc --watch",
-    "dev:server": "node scripts/watch.js",
-    "build": "cross-env NODE_ENV=PRODUCTION npm-run-all build:*",
+    "dev:server": "webpack --watch",
+    "build": "npm-run-all build:*",
     "build:types": "tsc",
-    "build:dist": "rollup --config",
+    "build:dist": "cross-env NODE_ENV=PRODUCTION rollup --config",
     "test": "npm-run-all test:*",
     "test:types": "tsc -p test/types/tsconfig.json",
     "test:unit": "babel-node test/unit/runner.js"

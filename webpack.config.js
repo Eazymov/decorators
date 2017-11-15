@@ -6,10 +6,13 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js'],
     alias: {
       "package": path.resolve(__dirname, '..', './'),
     },
+  },
+  devServer: {
+    contentBase: './static',
   },
   module: {
     rules: [
@@ -20,4 +23,4 @@ module.exports = {
       },
     ],
   },
-};
+}
