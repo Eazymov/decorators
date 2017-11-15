@@ -15,17 +15,11 @@ const banner = `
 
 const config = {
   input: './lib/index.js',
-}
-
-switch (process.env.NODE_ENV) {
-  case node_envs.PRODUCTION: {
-    config.output = {
-      file: `dist/${meta.name}.cjs.js`,
-      format: 'cjs',
-      banner,
-    };
-    break;
-  }
+  output: {
+    file: `dist/${meta.name}.cjs.js`,
+    format: 'cjs',
+    banner: banner,
+  },
 }
 
 module.exports = config
