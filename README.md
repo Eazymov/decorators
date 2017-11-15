@@ -8,12 +8,6 @@
 
 ## Installation
 
-### Direct `<script />` include:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@eazymov/decorators@latest/dist/decorators.min.js"></script>
-```
-
 ### NPM
 
 ```bash

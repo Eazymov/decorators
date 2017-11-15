@@ -6,7 +6,7 @@ const reporter = new SpecReporter({
   spec: {
     displayPending: true,
   },
-});
+})
 
 jasmine.env.clearReporters();
 jasmine.env.addReporter(reporter);

@@ -2,17 +2,22 @@
   "name": "decorators",
   "version": "0.0.0",
   "description": "A set of various decorators",
-  "main": "lib/index.js",
+  "main": "dist/decorators.cjs.js",
+  "module": "lib/index.js",
   "types": "types",
   "files": [
     "dist",
     "lib",
-    "src"
+    "types"
   ],
   "scripts": {
-    "dev": "concurrently 'tsc -w' 'webpack-dev-server --config config/dev.config.js'",
-    "build": "tsc && webpack --config config/prod.config.js --display-modules",
-    "test": "npm run test:types && npm run test:unit",
+    "dev": "concurrently 'npm run dev:types' 'npm run dev:server'",
+    "dev:types": "tsc --watch",
+    "dev:server": "node scripts/watch.js",
+    "build": "cross-env NODE_ENV=PRODUCTION npm-run-all build:*",
+    "build:types": "tsc",
+    "build:dist": "rollup --config",
+    "test": "npm-run-all test:*",
     "test:types": "tsc -p test/types/tsconfig.json",
     "test:unit": "babel-node test/unit/runner.js"
   },
@@ -41,6 +46,7 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-env": "^1.6.1",
     "cross-spawn": "^5.1.0",
+    "dotenv": "^4.0.0",
     "http-server": "^0.10.0",
     "jasmine": "^2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
