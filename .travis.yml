@@ -10,7 +10,7 @@ cache:
 
 install:
  - npm install
- - npm install -g npm-run-all cross-env
+ - npm install -g npm-run-all cross-env rollup
 
 script:
  - npm run build
