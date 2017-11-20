@@ -8,5 +8,9 @@ cache:
   directories:
    - node_modules
 
+install:
+ - npm install
+ - npm install -g npm-run-all
+
 script:
  - npm test
