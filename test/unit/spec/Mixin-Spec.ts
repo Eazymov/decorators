@@ -1,4 +1,4 @@
-import { Mixin } from 'package';
+import { Mixin } from 'src';
 
 describe('`Mixin` decorator', function () {
 
@@ -11,7 +11,7 @@ describe('`Mixin` decorator', function () {
       return this;
     },
 
-    getArguments (...args) {
+    getArguments (...args: any[]) {
       return args;
     },
   });
@@ -19,7 +19,7 @@ describe('`Mixin` decorator', function () {
   @MyMixin
   class Test { }
 
-  const test = new Test();
+  const test: any = new Test();
 
   it('instance should have shared method', function () {
     expect(typeof test.sharedMethod).toBe('function');

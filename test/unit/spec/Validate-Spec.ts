@@ -1,16 +1,16 @@
-import { Validator } from 'package';
+import { Validate } from 'src';
 
 describe('`Validator` decorator', function () {
   
-  const isString = (val) => typeof val === 'string';
+  const isString = (val: any) => typeof val === 'string';
 
   class Test {
 
-    @Validator(isString)
+    @Validate(isString)
     field = 'string';
   }
 
-  const test = new Test();
+  const test: any = new Test();
 
   it('property should update when new value is valid', function () {
     test.field = 'new string';

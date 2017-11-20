@@ -1,4 +1,4 @@
-import { Seal } from 'package';
+import { Seal } from 'src';
 
 describe('`Seal` decorator', function () {
 
@@ -7,7 +7,7 @@ describe('`Seal` decorator', function () {
     field = 1;
   }
 
-  const test = new Test();
+  const test: any = new Test();
 
   it('instance should not be extensible', function () {
     const throwsError = () => {

@@ -1,10 +1,10 @@
-import { Freeze } from 'package';
+import { Readonly } from 'src';
 
-describe('`Freeze` decorator', function () {
+describe('`Readonly` decorator', function () {
 
-  @Freeze
   class Test {
-    field = 1;
+
+    @Readonly field = 1;
   }
 
   const test = new Test();

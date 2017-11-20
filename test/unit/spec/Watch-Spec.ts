@@ -1,4 +1,4 @@
-import { Watch } from 'package';
+import { Watch } from 'src';
 
 describe('`Watch` decorator', function () {
   

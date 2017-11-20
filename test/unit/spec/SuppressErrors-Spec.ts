@@ -1,4 +1,4 @@
-import { SuppressErrors } from 'package';
+import { SuppressErrors } from 'src';
 
 describe('`SuppressErrors` decorator', function () {
 
@@ -12,7 +12,7 @@ describe('`SuppressErrors` decorator', function () {
       return this;
     }
 
-    @SuppressErrors getArguments (...args) {
+    @SuppressErrors getArguments (...args: any[]) {
       return args;
     }
   }

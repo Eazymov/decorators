@@ -5,12 +5,14 @@ const Describe = (newDescriptor: PropertyDescriptor): Decorator => {
     target: Object,
     prop: PropertyKey,
     descriptor: PropertyDescriptor = {}
-  ): void => {
+  ): PropertyDescriptor => {
     const changedKeys: Array<string> = Object.keys(newDescriptor);
 
     changedKeys.forEach((key: string) => {
       descriptor[key] = newDescriptor[key];
     });
+
+    return descriptor;
   }
 }
 

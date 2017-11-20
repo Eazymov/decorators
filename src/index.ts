@@ -5,7 +5,7 @@ import Mixin from './Mixin';
 import Readonly from './Readonly';
 import Seal from './Seal';
 import SuppressErrors from './SuppressErrors';
-import Validator from './Validator';
+import Validate from './Validate';
 import Watch from './Watch';
 
 export {
@@ -16,6 +16,6 @@ export {
   Readonly,
   Seal,
   SuppressErrors,
-  Validator,
+  Validate,
   Watch,
 };
