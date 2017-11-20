@@ -1,6 +1,6 @@
 import { Mixin } from 'package';
 
-describe('`Mixin` decorator:', function () {
+describe('`Mixin` decorator', function () {
 
   const MyMixin = Mixin({
     sharedMethod: function () {
@@ -21,7 +21,7 @@ describe('`Mixin` decorator:', function () {
 
   const test = new Test();
 
-  it('instance `test` should have `sharedMethod`', function () {
+  it('instance should have shared method', function () {
     expect(typeof test.sharedMethod).toBe('function');
   });
 

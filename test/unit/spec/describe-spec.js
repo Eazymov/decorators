@@ -1,6 +1,6 @@
 import { Describe } from 'package';
 
-describe('`Describe` decorator:', function () {
+describe('`Describe` decorator', function () {
 
   class Test {
 

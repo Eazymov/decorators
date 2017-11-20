@@ -1,6 +1,6 @@
 import { Watch } from 'package';
 
-describe('`Watch` decorator:', function () {
+describe('`Watch` decorator', function () {
   
   let called = false;
 
@@ -14,7 +14,7 @@ describe('`Watch` decorator:', function () {
 
   const test = new Test();
 
-  it('`watcher` function should be called when `field` property changes', function () {
+  it('watcher should be called when property changes', function () {
     test.field = 2;
 
     expect(called).toBeTruthy();

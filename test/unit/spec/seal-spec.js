@@ -1,6 +1,6 @@
 import { Seal } from 'package';
 
-describe('`Seal` decorator:', function () {
+describe('`Seal` decorator', function () {
 
   @Seal
   class Test {
@@ -9,7 +9,7 @@ describe('`Seal` decorator:', function () {
 
   const test = new Test();
 
-  it('instance `test` should not be extensible', function () {
+  it('instance should not be extensible', function () {
     const throwsError = () => {
       test.anotherField = 2;
     };

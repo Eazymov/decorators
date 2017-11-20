@@ -1,6 +1,6 @@
 import { Benchmark } from 'package';
 
-describe('`Benchmark` decorator:', function () {
+describe('`Benchmark` decorator', function () {
 
   class Test {
 
@@ -22,7 +22,7 @@ describe('`Benchmark` decorator:', function () {
   const test = new Test();
   const performance = 123;
 
-  it('instance `test` should have `benchmarkedMethod`', function () {
+  it('instance should have benchmarked method', function () {
     expect(typeof test.benchmarkedMethod).toBe('function');
   });
 
